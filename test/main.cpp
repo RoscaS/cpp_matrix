@@ -1,32 +1,28 @@
 #include<iostream>
+#include<vector>
+#include<forward_list>
+
 using namespace std;
 
-int** matrice()
-{
-    int **_tab = new int*[3];
-    for (int i = 0; i < 3; ++i) {
-        _tab[i] = new int[3];
+
+void test(int x){
+    if (x > 10)
+    {
+        return;
     }
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 4; ++j) {
-            if (j == i) { _tab[i][j] = 1; }
-            else { _tab[i][j] = 0; }
-        }        
-    }
-    return _tab;
+    x += 2;
+    cout << x << endl;
 }
 
 
 int main()
 {
-    int **_tab = matrice();
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 4; ++j)
-        {
-            cout << _tab[i][j] << "\n";
-        }
+    vector<int> vi = {5,6,7};
+    int *pb = &vi[0];
 
-    }
-    
+    cout << vi[0] << "\n";
+    cout << *pb << "\n";
+
+
     return 0;
 }

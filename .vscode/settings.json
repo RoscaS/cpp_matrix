@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.tpp": "cpp",
+        "iostream": "cpp",
+        "forward_list": "cpp",
+        "type_traits": "cpp",
+        "xstddef": "cpp",
+        "xmemory0": "cpp",
+        "xstring": "cpp",
+        "limits": "cpp",
+        "memory": "cpp"
+    }
+}

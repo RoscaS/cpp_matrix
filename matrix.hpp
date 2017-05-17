@@ -14,6 +14,7 @@ public:
     Matrix(const Matrix&);
    ~Matrix();
 
+   void fill();
    void show();
    Matrix& operator = (const Matrix&);
    Matrix& operator = (int&);
