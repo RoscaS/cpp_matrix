@@ -1,23 +1,22 @@
 #pragma once
 
-template<typename T>
+// template<typename T>
 class Matrix
 {
 protected:
-    T** _tab;
-    int _len;
+    int** _tab;
+    int     _x;
+    int     _y;
     void init();
 public:
     Matrix();
-    Matrix(T);
+    Matrix(int, int);
     Matrix(const Matrix&);
    ~Matrix();
 
    void show();
    Matrix& operator = (const Matrix&);
-   Matrix& operator = (T&);
+   Matrix& operator = (int&);
 };
 
-
-
-#include "matrix.tpp"
+// #include "matrix.tpp"
