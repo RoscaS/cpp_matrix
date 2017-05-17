@@ -8,6 +8,10 @@
         "xmemory0": "cpp",
         "xstring": "cpp",
         "limits": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "chrono": "cpp",
+        "xutility": "cpp",
+        "ios": "cpp",
+        "iosfwd": "cpp"
     }
 }

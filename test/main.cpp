@@ -1,28 +1,50 @@
 #include<iostream>
-#include<vector>
-#include<forward_list>
-
 using namespace std;
-
-
-void test(int x){
-    if (x > 10)
-    {
-        return;
-    }
-    x += 2;
-    cout << x << endl;
-}
-
 
 int main()
 {
-    vector<int> vi = {5,6,7};
-    int *pb = &vi[0];
+    int _x = 5;
+    int _y = 3;
+    int **_tab;
+    
+    // ---------- INIT ----------
+    _tab = new int *[_x];
 
-    cout << vi[0] << "\n";
-    cout << *pb << "\n";
+    for (int i = 0; i < _x; ++i)
+    {
+        _tab[i] = new int[_y];
+    }
+    
+    // ---------- FILL ----------
+    for (int i = 0; i < _y; ++i)
+    {
+        for (int j = 0; j < _x; ++j)
+        {
+            _tab[j][i] = 0;
+        }
+    }
 
+    // ---------- DISPLAY ----------
+    for (int i = 0; i < _y; ++i)
+    {
+        for (int j = 0; j < _x; ++j)
+        {
+            cout << _tab[j][i] << " ";
+        }
+        cout << "\n";
+    }
+
+    // ---------- CLEAN ----------
+    for (int i = 0; i < _x; ++i)
+    {
+        delete [] _tab[i];
+    }
+
+    delete [] _tab;
+
+    _tab = nullptr;
+    _x   = 0;
+    _y   = 0;
 
     return 0;
 }
