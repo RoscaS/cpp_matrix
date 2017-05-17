@@ -10,8 +10,8 @@ Matrix<float> m1(3, 4);
 
 This instruction gonna create a Matrix that holds floats and is composed of 3 lignes and4 columns.
 
-# todo:
-------
+## todo:
+
 - copy cstr
 - **`OL operator =`** that allows operations like **`matrixInt1 = matrixInt2`**
 - a second OL of **`operator =`** that'll allows to fill up a matrix with the same value.
