@@ -10,8 +10,17 @@ Matrix<float> m1(3, 4);
 
 This instruction gonna create a Matrix that holds floats and is composed of 3 lignes and4 columns.
 
-- linked list that store int type: [https://github.com/RoscaS/cpp_linkedList]()
-- linked list that store custom Shape type: [https://github.com/RoscaS/cpp_linkedList_shapes]()
+# todo:
+------
+- copy cstr
+- **`OL operator =`** that allows operations like **`matrixInt1 = matrixInt2`**
+- a second OL of **`operator =`** that'll allows to fill up a matrix with the same value.
+
+- a show() method that'll show the type of the elements stored and the content of the matrix.
+
+- like the generic linked list, it should be able to work with basic types and custom classes. 
+
+- in particular it should work with the "chaine" type (kind of string type) made a couple of months ago and the Pixel type that is on of the first type that takes benefit of the inheritence that I've made in c++.
 
 
 ### Personal notes:
