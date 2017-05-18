@@ -25,3 +25,5 @@ This instruction gonna create a Matrix that holds floats and is composed of 3 li
 
 ### Personal notes:
 - Ok, so I think I gonna start to make a non generic type of matrix that works with int type, and I'll see from there.
+----
+- I had some troubles with the basic logic of the building/filling/displaying/cleaning. I made a simple model and have done some tests to wrap my head around it and be clear.
