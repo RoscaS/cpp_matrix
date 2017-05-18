@@ -1,5 +1,5 @@
 # generic 2D matrix class (exercise 7.3)
----------------------
+
 Let's try to build a 2d matrix that is able to handle all sorts of types. The size of this bad guy is choosed by the user.
 
 for example, he should be able to type in:
@@ -23,13 +23,11 @@ This instruction gonna create a Matrix that holds floats and is composed of 3 li
 - in particular it should work with the "chaine" type (kind of string type) made a couple of months ago and the Pixel type that is on of the first type that takes benefit of the inheritence that I've made in c++.
 
 
-### Personal notes:
-- Ok, so I think I gonna start to make a non generic type of matrix that works with int type, and I'll see from there.
-----
-- I had some troubles with the basic logic of the building/filling/displaying/cleaning. I made a simple model and have done some tests to wrap my head around it and be clear:
-
-
->![alt text](illustration/simple_version.gif)
+## Personal notes:
+>1. Ok, so I think I gonna start to make a non generic type of matrix that works with int type, and I'll see from there.
+#
+>2. had some troubles with the basic logic of the building/filling/displaying/cleaning. I made a simple model and have done some tests to wrap my head around it and be clear:
+![alt text](illustration/simple_version.gif)
  brilliant website: [http://pythontutor.com/]()
 ```c++
 int main() {
@@ -69,5 +67,55 @@ int main() {
     return 0;
 }
 ```
---------
-Ok, it's implemented in a class and all the required features are working fine. Next step, make it genereic.
+#
+>3. it's implemented in a class and all the required features are working fine.
+```c++
+#include<iostream>
+#include"matrix.hpp"
+using namespace std;
+
+int main()
+ {
+    Matrix m;
+    m = 5;
+    cout << m << "\n";
+    Matrix m2;
+    m2 = 2;
+    cout << m2 << "\n";
+    m2 = m;
+    cout << m2 << "\n";
+    m = 9;
+    Matrix m3{m};
+    cout << m3 << "\n";
+    Matrix m4{9,5};
+    m4 = 6;
+    cout << m4 << "\n";
+    return 0;
+}
+```
+
+    5 5 5 
+    5 5 5 
+    5 5 5 
+
+    2 2 2 
+    2 2 2 
+    2 2 2 
+
+    5 5 5 
+    5 5 5 
+    5 5 5 
+
+    9 9 9 
+    9 9 9 
+    9 9 9 
+
+    6 6 6 6 6 6 6 6 6 
+    6 6 6 6 6 6 6 6 6 
+    6 6 6 6 6 6 6 6 6 
+    6 6 6 6 6 6 6 6 6 
+    6 6 6 6 6 6 6 6 6 
+
+> Next step, make it genereic.
+#
+
