@@ -1,10 +1,11 @@
 #include<iostream>
+#include<cstring>
 #include"matrix.hpp"
 #include"str.hpp"
 using namespace std;
 
 int main()
- {
+{
     cout << "INT:\n";
     // INT:
     Matrix<int> m;
@@ -76,23 +77,18 @@ int main()
     cout << "\n\nCustom type STR:\n";
     Matrix<Str> m13;
     m13 = "test";
-    // cout << m13 << "\n";
     m13.display(); cout << "\n";
     Matrix<Str> m14;
     m14 = "poule";
-    // cout << m2 << "\n";
     m14.display(); cout << "\n";
     m14 = m13;
-    // cout << m2 << "\n";
     m14.display(); cout << "\n";
     m13 = "cochon";
-    Matrix<Str> m14{m13};
-    // cout << m3 << "\n";
-    m14.display(); cout << "\n";
-    Matrix<Str> m15{9,5};
-    m15 = "boule";
-    // cout << m4 << "\n";
+    Matrix<Str> m15{m13};
     m15.display(); cout << "\n";
+    Matrix<Str> m16{9,5};
+    m16 = "vache";
+    m16.display(); cout << "\n";
 
 
     return 0;

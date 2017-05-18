@@ -125,3 +125,5 @@ output:
 >5. Tested and working fine with all basic types.
 
 >6. Next step testing it with custom types.
+
+>7. Working with custome Str class. Issue with **`operator <<`** to investigate.

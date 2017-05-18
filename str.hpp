@@ -1,5 +1,6 @@
 #pragma once
 #include<ostream>
+#include<cstring>
 
 class Str {
 public:
@@ -8,14 +9,21 @@ public:
     Str(const Str&);
     ~Str();
 
-    int lenght() const;
+    Str& operator=(const Str&);
+    void operator=(char*);
+    char& operator[](const int);
 
-    char& operator [] (const int);
-    Str& operator = (const Str&);
-    friend std::ostream& operator << (std::ostream &s, const Str &p);
-    friend char* operator + (const Str&, const Str&) ;
+    friend char* operator+
+    (const Str&, const Str&);
+
+    friend std::ostream& operator<<
+    (std::ostream&, const Str&);
 
 private:
-    char* ch_;
-    int len;
+    int getLen(char*) const;
+    void clean();
+    void init(char*);
+
+    char* _str;
+    int   _len;
 };
