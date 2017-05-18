@@ -93,6 +93,7 @@ int main()
     return 0;
 }
 ```
+output:
 
     5 5 5 
     5 5 5 
