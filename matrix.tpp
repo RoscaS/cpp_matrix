@@ -1,18 +1,18 @@
-#include<iostream>
-#include"matrix.hpp"
+// #include<iostream>
+// #include"matrix.hpp"
 
-
-void Matrix::init()
+template<typename T>
+void Matrix<T>::init()
 {
-    _tab = new int*[_x];
+    _tab = new T*[_x];
     for (int i = 0; i < _x; ++i)
     {
-        _tab[i] = new int[_y];
+        _tab[i] = new T[_y];
     }
 }
 
-
-void Matrix::copy(const Matrix &src)
+template<typename T>
+void Matrix<T>::copy(const Matrix<T> &src)
 {
     this->_x = src._x;
     this->_y = src._y;
@@ -27,8 +27,8 @@ void Matrix::copy(const Matrix &src)
 
 }
 
-
-void Matrix::clean()
+template<typename T>
+void Matrix<T>::clean()
 {
     if (_tab != nullptr)
     {
@@ -44,8 +44,8 @@ void Matrix::clean()
     }
 }
 
-
-Matrix::Matrix()
+template<typename T>
+Matrix<T>::Matrix()
 {
     _x = 3;
     _y = 3;
@@ -53,22 +53,22 @@ Matrix::Matrix()
     init();
 }
 
-
-Matrix::Matrix(int x, int y)
+template<typename T>
+Matrix<T>::Matrix(T x, T y)
     : _x(x), _y(y)
 {
     _tab = nullptr;
     init();
 }
 
-
-Matrix::~Matrix()
+template<typename T>
+Matrix<T>::~Matrix()
 {
     clean();
 }
 
-
-Matrix::Matrix(const Matrix &src)
+template<typename T>
+Matrix<T>::Matrix(const Matrix<T> &src)
 {
     if (this != &src)
     {  
@@ -76,8 +76,8 @@ Matrix::Matrix(const Matrix &src)
     }
 }
 
-
-Matrix& Matrix::operator = (const Matrix &src)
+template<typename T>
+Matrix<T>& Matrix<T>::operator = (const Matrix<T> &src)
 {
     if (this != &src)
     {
@@ -87,20 +87,20 @@ Matrix& Matrix::operator = (const Matrix &src)
     }
 }
 
-
-void Matrix::operator = (const int n)
+template<typename T>
+void Matrix<T>::operator = (const T val)
 {
      for (int i = 0; i < _y; ++i)
     {
         for (int j = 0; j < _x; ++j)
         {
-            _tab[j][i] = n;
+            _tab[j][i] = val;
         }
     }      
 }
 
-
-std::ostream& operator<<(std::ostream &out, const Matrix &src)
+template<typename T>
+std::ostream& operator<<(std::ostream &out, const Matrix<T> &src)
 {
     for (int i = 0; i < src._y; ++i)
     {

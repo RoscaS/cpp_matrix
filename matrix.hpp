@@ -1,25 +1,28 @@
 #pragma once
 #include<iostream>
 
-class Matrix
+template<typename T> class Matrix
 {
-private:
-    int** _tab;
-    int     _x;
-    int     _y;
-
-    void init();
-    void copy(const Matrix&);
-    void clean();
 public:
     Matrix();
-    Matrix(const int, const int);
+    Matrix(const T, const T);
    ~Matrix();
 
-    Matrix(const Matrix&);
-    Matrix& operator = (const Matrix&);
+    Matrix(const Matrix<T>&);
+    Matrix& operator = (const Matrix<T>&);
 
     void operator = (const int); // (fill)
     friend std::ostream& operator<<
-        (std::ostream&, const Matrix&);
+        (std::ostream&, const Matrix<T>&);
+
+private:
+    T** _tab;
+    T     _x;
+    T     _y;
+
+    void init();
+    void copy(const Matrix<T>&);
+    void clean();
 };
+
+#include"matrix.tpp"
