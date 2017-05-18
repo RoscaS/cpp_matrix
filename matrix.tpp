@@ -62,12 +62,6 @@ Matrix<T>::Matrix(T x, T y)
 }
 
 template<typename T>
-Matrix<T>::~Matrix()
-{
-    clean();
-}
-
-template<typename T>
 Matrix<T>::Matrix(const Matrix<T> &src)
 {
     if (this != &src)
@@ -99,16 +93,29 @@ void Matrix<T>::operator = (const T val)
     }      
 }
 
+// template<typename T>
+// std::ostream& operator<<(std::ostream &out, const Matrix<T> &src)
+// {
+//     for (int i = 0; i < src._y; ++i)
+//     {
+//         for (int j = 0; j < src._x; ++j)
+//         {
+//             out << src._tab[j][i] << " ";
+//         }
+//         out << "\n";        
+//     }
+//     return out;
+// }
+
 template<typename T>
-std::ostream& operator<<(std::ostream &out, const Matrix<T> &src)
+void Matrix<T>::display()
 {
-    for (int i = 0; i < src._y; ++i)
+    for (int i = 0; i < _y; ++i)
     {
-        for (int j = 0; j < src._x; ++j)
+        for (int j = 0; j < _x; ++j)
         {
-            out << src._tab[j][i] << " ";
+            std::cout << _tab[j][i] << " ";
         }
-        out << "\n";        
+        std::cout << "\n";        
     }
-    return out;
 }
