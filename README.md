@@ -28,4 +28,4 @@ This instruction gonna create a Matrix that holds floats and is composed of 3 li
 ----
 - I had some troubles with the basic logic of the building/filling/displaying/cleaning. I made a simple model and have done some tests to wrap my head around it and be clear:
 
-![alt text](simple_version2.gif)
+![alt text](illustration/simple_version.gif)
