@@ -1,6 +1,3 @@
-// #include<iostream>
-// #include"matrix.hpp"
-
 template<typename T>
 void Matrix<T>::init()
 {
@@ -24,7 +21,6 @@ void Matrix<T>::copy(const Matrix<T> &src)
             this->_tab[j][i] = src._tab[j][i];
         }
     }
-
 }
 
 template<typename T>
