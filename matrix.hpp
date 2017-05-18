@@ -5,7 +5,7 @@ template<typename T> class Matrix
 {
 public:
     Matrix();
-    Matrix(const T, const T);
+    Matrix(const int, const int);
    ~Matrix();
 
     Matrix(const Matrix<T>&);
@@ -18,8 +18,8 @@ public:
     // friend std::ostream& operator<<(std::ostream&, const Matrix<T>&);
 private:
     T** _tab;
-    T     _x;
-    T     _y;
+    int   _x;
+    int   _y;
     void init();
     void copy(const Matrix<T>&);
     void clean();

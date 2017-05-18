@@ -54,7 +54,7 @@ Matrix<T>::Matrix()
 }
 
 template<typename T>
-Matrix<T>::Matrix(T x, T y)
+Matrix<T>::Matrix(int x, int y)
     : _x(x), _y(y)
 {
     _tab = nullptr;
