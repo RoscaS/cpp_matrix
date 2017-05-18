@@ -120,3 +120,4 @@ output:
 > Next step, make it genereic.
 #
 
+>4. It was pretty easy to get to a functionnal conversion. I didn't test it all the ways arround yet (I'm commuting atm) but it's compiling and working with int in a generic fashion. I still had the same issue as with the linked list (generic) with the destructor that I had to move in the .hpp file and also some issues with the OLed << that I had to replce with a display() method.
