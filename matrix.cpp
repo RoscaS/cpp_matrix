@@ -47,7 +47,7 @@ void Matrix::clean()
 
 Matrix::Matrix()
 {
-    _x = 5;
+    _x = 3;
     _y = 3;
     _tab = nullptr;
     init();

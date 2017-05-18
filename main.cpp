@@ -16,5 +16,9 @@ int main()
     Matrix m3{m};
     cout << m3 << "\n";
 
+    Matrix m4{9,5};
+    m4 = 6;
+    cout << m4 << "\n";
+
     return 0;
 }
