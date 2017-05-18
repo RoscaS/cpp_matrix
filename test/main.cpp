@@ -5,16 +5,14 @@ int main()
 {
     int _x = 5;
     int _y = 3;
-    int **_tab;
-    
+    int **_tab;  
     // ---------- INIT ----------
     _tab = new int *[_x];
 
     for (int i = 0; i < _x; ++i)
     {
         _tab[i] = new int[_y];
-    }
-    
+    }  
     // ---------- FILL ----------
     for (int i = 0; i < _y; ++i)
     {
@@ -23,7 +21,6 @@ int main()
             _tab[j][i] = 0;
         }
     }
-
     // ---------- DISPLAY ----------
     for (int i = 0; i < _y; ++i)
     {
@@ -33,7 +30,6 @@ int main()
         }
         cout << "\n";
     }
-
     // ---------- CLEAN ----------
     for (int i = 0; i < _x; ++i)
     {
