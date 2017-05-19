@@ -10,7 +10,7 @@ int main()
     // INT:
     Matrix<int> m;
     m = 5;
-    // cout << m << "\n";
+    // cout << m << endl;
     m.display(); cout << "\n";
     Matrix<int> m2;
     m2 = 2;
@@ -89,7 +89,6 @@ int main()
     Matrix<Str> m16{9,5};
     m16 = "vache";
     m16.display(); cout << "\n";
-
 
     return 0;
 }
