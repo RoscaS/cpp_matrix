@@ -1,6 +1,3 @@
-// #include<iostream>
-// #include"matrix.hpp"
-
 
 template<typename T>
 Matrix<T>::~Matrix()
