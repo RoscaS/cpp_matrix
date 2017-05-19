@@ -15,7 +15,9 @@ public:
 
     void display();
 
-    // friend std::ostream& operator<<(std::ostream&, const Matrix<T>&);
+    // friend std::ostream& operator<<
+    // (std::ostream&, const Matrix<T>&);
+
 private:
     T** _tab;
     int   _x;
@@ -24,11 +26,5 @@ private:
     void copy(const Matrix<T>&);
     void clean();
 };
-
-template<typename T>
-Matrix<T>::~Matrix()
-{
-    clean();
-}
 
 #include"matrix.tpp"

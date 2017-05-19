@@ -1,5 +1,9 @@
-// #include<iostream>
-// #include"matrix.hpp"
+
+template<typename T>
+Matrix<T>::~Matrix()
+{
+    clean();
+}
 
 template<typename T>
 void Matrix<T>::init()
@@ -24,7 +28,6 @@ void Matrix<T>::copy(const Matrix<T> &src)
             this->_tab[j][i] = src._tab[j][i];
         }
     }
-
 }
 
 template<typename T>
@@ -93,20 +96,6 @@ void Matrix<T>::operator = (const T val)
     }      
 }
 
-// template<typename T>
-// std::ostream& operator<<(std::ostream &out, const Matrix<T> &src)
-// {
-//     for (int i = 0; i < src._y; ++i)
-//     {
-//         for (int j = 0; j < src._x; ++j)
-//         {
-//             out << src._tab[j][i] << " ";
-//         }
-//         out << "\n";        
-//     }
-//     return out;
-// }
-
 template<typename T>
 void Matrix<T>::display()
 {
@@ -119,3 +108,17 @@ void Matrix<T>::display()
         std::cout << "\n";        
     }
 }
+
+// template<typename T>
+// std::ostream& operator<<(std::ostream &out, const Matrix<T> &src)
+// {
+//     for (int i = 0; i < src._y; ++i)
+//     {
+//         for (int j = 0; j < src._x; ++j)
+//         {
+//             out << src._tab[j][i] << " ";
+//         }
+//         out << "\n";    
+//     }
+//     return out;
+// }
